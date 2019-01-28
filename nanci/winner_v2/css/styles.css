@@ -1,0 +1,567 @@
+/*  GENERAL  */
+body{
+    font-family:  "Maiandra GD",sans-serif;
+    text-decoration: none;
+    }
+* {
+    box-sizing: border-box;
+}
+
+/*BAR DE RESEAU SOCIAL*/
+.rs{
+    background-color:#4e4d52;
+    font-size: 18px;
+}
+.social{
+    text-align: center;
+    margin: 8px auto;}
+.link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px dashed white;
+    padding: 10px;
+    transition: .5s;
+    color: #D7D0BE;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.link span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.link:hover{
+    padding: 16px;
+    color: white;
+    margin-left: -5px;
+    transform: translateX(10px) rotate(360deg);
+}
+.social .link.github {
+    color: white;
+}
+.link.youtube {
+    color: white;
+}
+.link.facebook {
+    color: white;
+}
+.link.enveloppe {
+    color: white;
+}
+
+/*  CSS BAR DE NAVIGUATION  */
+
+a {
+    color: #333;
+}
+.menu {
+    width: 100%;
+}
+.menu-container {
+    margin: 0 auto;
+    background: #e9e9e9;
+    height: 72px;
+}
+.menu a.logo {
+    display: inline-block;
+    padding: 1.5em 3em;
+    width: 19%;
+    float: left;
+    margin: -17px;
+}
+
+.menu-mobile {
+    display: none;
+    padding: 20px;
+}
+.menu-mobile:after {
+
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f039";
+
+    font-size: 2.5rem;
+    padding: 0;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+}
+.menu-dropdown-icon:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f055";
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 1.5em 2em;
+    background: #fff;
+    color: #333;
+}
+.menu > ul {
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+    box-sizing: border-box;
+    clear: right;
+}
+.menu > ul:before,
+.menu > ul:after {
+    content: "";
+    display: table;
+}
+.menu > ul:after {
+    clear: both;
+}
+.menu > ul > li {
+    float: left;
+    background: #e9e9e9;
+    padding: 0;
+    margin: 0;
+}
+.menu > ul > li a {
+    text-decoration: none;
+    padding: 1.5em 2em;
+    display: block;
+}
+.menu > ul > li:hover {
+    background: #f0f0f0;
+}
+.menu > ul > li > ul {
+    display: none;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.menu > ul > li > ul:before,
+.menu > ul > li > ul:after {
+    content: "";
+    display: table;
+}
+.menu > ul > li > ul:after {
+    clear: both;
+}
+.menu > ul > li > ul > li {
+    margin: 0;
+    padding-bottom: 0;
+    list-style: none;
+    width: 25%;
+    background: none;
+    float: left;
+}
+.menu > ul > li > ul > li a {
+    color: #777;
+    padding: .2em 0;
+    width: 95%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+.menu > ul > li > ul > li a:hover{
+    color:#03a9f4;
+}
+.menu > ul > li > ul > li > ul {
+    display: block;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.menu > ul > li > ul > li > ul:before,
+.menu > ul > li > ul > li > ul:after {
+    content: "";
+    display: table;
+}
+.menu > ul > li > ul > li > ul:after {
+    clear: both;
+}
+.menu > ul > li > ul > li > ul > li {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    font-size: .4em;
+}
+.menu > ul > li > ul > li > ul > li a {
+    border: 0;
+    font-size: 16px;
+}
+.menu > ul > li > ul.normal-sub {
+    width: 300px;
+    left: auto;
+    padding: 10px 20px;
+}
+.menu > ul > li > ul.normal-sub > li {
+    width: 100%;
+}
+.menu > ul > li > ul.normal-sub > li a {
+    border: 0;
+    padding: 1em 0;
+}
+
+
+.bout
+{
+    display: inline-block;
+    margin-top: 20px;
+    float: right;
+}
+.contact .fa, .contact .fas, .contact .far
+{
+    border: 0;
+    font-size: 50px;
+    color: #777fff;
+    text-align: center;
+
+}
+.contact p
+{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.candidater
+{
+    margin-left: 200px;
+    margin-top: 17px;
+}
+.btn-outline-primary:hover{
+    background-color: #777fff;;
+}
+
+
+/*-- banner --*/
+.banner {
+    background: url(../images/mains.jpg) no-repeat  center;
+    background-size: cover;
+}
+.banner-text {
+    padding: 20vw 0 23vw;
+    position: relative;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.heading1{
+    height: 150px;
+}
+.banner-text h1 {
+    color: #fff;
+    display: inline-block;
+    font-size: 6em;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+}
+
+/* FLECHE DE SCROLL */
+.scroll-down{
+     opacity: 1;
+     -webkit-transition: all .5s ease-in 3s;
+     transition: all .5s ease-in 3s;
+ }
+img.arrow {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 99;
+    left: 2%;
+    top: 90%;
+    margin-top: -2.5em;
+    animation: ArrowAnim 2s infinite;
+    animation-name: ArrowAnim;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes ArrowAnim{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*  LES DIFFERENTS LANGAGES     */
+
+.demo .list {
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-stle: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: -140px;
+    top: 190%;
+}
+
+.demo .list a {
+
+    display: block;
+    color: #fff;
+}
+
+.demo .list a:hover {
+    text-indent: 20px;
+}
+
+.demo .list dt, .list dd {
+
+    text-indent: 10px;
+    line-height: 55px;
+    background: #E0FBAC;
+    margin: 0;
+    height: 55px;
+    width: 270px;
+    color: #fff;
+}
+
+.demo .list dt {
+
+    /* Since we're hiding elements behind here, we need it in 3d */
+    -webkit-transform: translateZ(0.3px);
+    -moz-transform: translateZ(0.3px);
+    -ms-transform: translateZ(0.3px);
+    -o-transform: translateZ(0.3px);
+    transform: translateZ(0.3px);
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+}
+
+.demo .list dd {
+
+    border-top: 1px dashed rgba(255,255,255,0.3);
+    line-height: 35px;
+    font-size: 11px;
+    height: 35px;
+    margin: 0;
+}
+
+/* Individual styles */
+
+.demo .sashimi dt, .sashimi dd, .sashimi a { background: #000; }
+.demo .nigiri dt, .nigiri dd, .nigiri a { background: #f03861; }
+.demo .maki dt, .maki dd, .maki a { background: #3e4e88; }
+
+.demo .sashimi a:hover { background: #61c19e; }
+.demo .nigiri a:hover { background: #d31b46; }
+.demo .maki a:hover { background: #ffbb00; }
+
+.demo .nigiri {
+
+    -webkit-transform: perspective(1200px) rotateY(40deg) !important;
+    -moz-transform: perspective(1200px) rotateY(40deg) !important;
+    -ms-transform: perspective(1200px) rotateY(40deg) !important;
+    -o-transform: perspective(1200px) rotateY(40deg) !important;
+    transform: perspective(1200px) rotateY(40deg) !important;
+
+    -webkit-transform-origin: 110% 25%;
+    -moz-transform-origin: 110% 25%;
+    -ms-transform-origin: 110% 25%;
+    -o-transform-origin: 110% 25%;
+    transform-origin: 110% 25%;
+
+    left: 20%;
+}
+
+.demo .maki {
+
+    -webkit-transform: perspective(600px) translateZ(1px) !important;
+    -moz-transform: perspective(600px) translateZ(1px) !important;
+    -ms-transform: perspective(600px) translateZ(1px) !important;
+    -o-transform: perspective(600px) translateZ(1px) !important;
+    transform: perspective(600px) translateZ(1px) !important;
+
+    left: 50%;
+}
+
+.demo .sashimi {
+
+    -webkit-transform: perspective(1200px) rotateY(-40deg) !important;
+    -moz-transform: perspective(1200px) rotateY(-40deg) !important;
+    -ms-transform: perspective(1200px) rotateY(-40deg) !important;
+    -o-transform: perspective(1200px) rotateY(-40deg) !important;
+    transform: perspective(1200px) rotateY(-40deg) !important;
+
+    -webkit-transform-origin: -10% 25%;
+    -moz-transform-origin: -10% 25%;
+    -ms-transform-origin: -10% 25%;
+    -o-transform-origin: -10% 25%;
+    transform-origin: -10% 25%;
+
+    left: 80%;
+}
+.langages
+{
+    background: url("../images/ordi2.jpg") no-repeat center center;
+    background-size: cover;
+    height: 520px;
+}
+
+/*  FOOTER */
+.md-form .prefix{
+    left: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 962px) {
+    .menu-container {
+        width: 100%;
+    }
+    .menu-container .menu{
+        display:inline-block;
+    }
+    .menu-mobile {
+        display: block;
+        float: right;
+        padding: 20px 20px 0;
+    }
+    .menu-dropdown-icon:before {
+        display: block;
+    }
+    .menu > ul {
+        display: none;
+        width:100%;
+    }
+    .menu > ul > li {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+    .menu > ul > li a {
+        padding: 1.5em;
+        width: 100%;
+        display: block;
+    }
+    .menu > ul > li > ul {
+        position: relative;
+        padding: 0 40px;
+    }
+    .menu > ul > li > ul.normal-sub {
+        width: 100%;
+    }
+    .menu > ul > li > ul > li {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .menu > ul > li > ul > li:first-child {
+        margin: 0;
+    }
+    .menu > ul > li > ul > li > ul {
+        position: relative;
+    }
+    .menu > ul > li > ul > li > ul > li {
+        float: none;
+    }
+    .menu .show-on-mobile {
+        display: block;
+    }
+    button
+    {
+        position: relative;
+        right:50px;
+        bottom: 10px;
+    }
+}
+@media screen and (min-width: 962px) and (max-width: 1473px){
+   .menu ul li a {
+       padding: 1.5em 0.5em;
+   }
+}
+
+@media screen and (max-width: 1191px) and (min-width:936px) {
+    img.arrow
+    {
+        left: 2%;
+        top: 80%;
+    }
+}
+@media screen and (max-width: 937px) and (min-width:705px) {
+    img.arrow
+    {
+        left: 2%;
+        top: 70%;
+    }
+}
+@media screen and (max-width: 705px) and (min-width:400px) {
+    img.arrow
+    {
+        left: 2%;
+        top: 53%;
+    }
+}
+
+@media screen and (max-width: 1018px){
+    .banner-text h1{
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 766px){
+    .banner-text h1{
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 766px){
+    .banner-text h1{
+        font-size: 2em;
+    }
+}

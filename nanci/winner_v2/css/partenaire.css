@@ -1,0 +1,108 @@
+
+.beauty-container {
+
+  width: 300px;
+  height: 200px;
+  background-color: #777fff;
+  box-shadow: inset 100px 0 10px 5px rgba(0, 0, 0, 0.4);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  perspective: 1000px;
+  perspective-origin: bottom;
+  z-index: 1;
+}
+.beauty-container:hover .beauty-card-parent {
+  left: -20px;
+}
+.beauty-container:hover .beauty-card-parent .beauty-card-cover {
+  opacity: 0;
+  right: -20px;
+  transform: rotateY(180deg);
+}
+.beauty-container:hover .beauty-card:nth-child(3) {
+  left: 350px;
+  top: -40px;
+  transition-delay: 1.5s;
+}
+.beauty-container:hover .beauty-card:nth-child(2) {
+  left: 550px;
+  top: -50px;
+  transition-delay: 1.25s;
+}
+.beauty-container:hover .beauty-card:nth-child(1) {
+  left: 750px;
+  top: -60px;
+  transition-delay: 1s;
+}
+.beauty-container:hover .beauty-card {
+  height: 280px !important;
+  box-shadow: 0 10px 15px 1px rgba(31, 56, 108, 0.4);
+}
+.beauty-container:hover .beauty-card:hover {
+  transition: .1s all;
+  z-index: 1;
+  transform: scale(1.2);
+  position: absolute;
+}
+
+.beauty-card-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #777fff;
+  transition: 0.5s all !important;
+}
+.beauty-card-parent .beauty-card-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  transition: 0.3s all;
+  height: 99%;
+  background-color: blue;
+  border: 1px solid rgba(80, 120, 120, 0.5);
+  border-right: none;
+  box-shadow: -6px 0 5px -4px rgba(80, 120, 120, 0.5);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.beauty-card-parent:hover {
+  box-shadow: 10px 0 5px -4px rgba(80, 120, 120, 0.5);
+}
+.beauty-card-parent .beauty-card-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: inherit;
+  font-size: 24px;
+  font-family: "Lucida Sans Typewriter", sans-serif;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.beauty-card {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: 0.5s all;
+  width: 89%;
+  height: 95%;
+  transform: scale(0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.beauty-card:nth-child(1) {
+  background-image: url("../images/download (1).png");
+}
+.beauty-card:nth-child(2) {
+  background-image: url("../images/download.png");
+}
+.beauty-card:nth-child(3) {
+  background-image: url("../images/download3.jpeg");
+}
